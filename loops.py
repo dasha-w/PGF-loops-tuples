@@ -16,9 +16,23 @@
 
 
 # Probeer het eerst zonder loop,
+getal = int(input('Voer een getal in: '))
 
+print(f'{getal} x 1 = {getal * 1}')
+print(f'{getal} x 2 = {getal * 2}')
+print(f'{getal} x 3 = {getal * 3}')
+print(f'{getal} x 4 = {getal * 4}')
+print(f'{getal} x 5 = {getal * 5}')
+print(f'{getal} x 6 = {getal * 6}')
+print(f'{getal} x 7 = {getal * 7}')
+print(f'{getal} x 8 = {getal * 8}')
+print(f'{getal} x 9 = {getal * 9}')
+print(f'{getal} x 10 = {getal * 10}')
 
 # Probeer het nu met een loop.
+print('-------------------')
+for i in range(1,11):
+    print(f'{getal} x {i} = {getal * i}')
 
 
 # --------------------------------------------------------------------------------------------
@@ -28,7 +42,14 @@
 
 # Bijvoorbeeld: de som van alle getallen tot 3 is 6 (1 + 2 + 3 = 6)
 
+limiet = int(input('Voer een limiet in: '))
+teller = 1
+som = 0
 
+while teller <= limiet:
+    som += teller
+    teller += 1
+print(f'De som van alle getallen tot {limiet} is {som}.')
 
 # --------------------------------------------------------------------------------------------
 
@@ -39,7 +60,17 @@
 # Maar voor veelvouden van drie, druk "Fizz" af in plaats van het getal.
 # En voor veelvouden van vijf, druk "Buzz" af.
 # Voor veelvouden van zowel drie als vijf, druk "FizzBuzz" af.
+print('--------------')
 
+for getal in range(1,101):
+    if getal % 3 == 0 and getal % 5 == 0:
+        print("FizzBuzz")
+    elif getal % 3 == 0:
+        print("Fizz")
+    elif getal % 5 == 0:
+        print("Buzz")
+    else:
+        print(getal)
 
 
 # --------------------------------------------------------------------------------------------
@@ -67,6 +98,13 @@ a = 0
 b = 1
 
 # Eerst drukken we de eerste twee getallen af
-
+print(a)
+print(b)
 
 # Vervolgens berekenen we de volgende getallen en drukken ze af
+
+for j in range(2, i):
+    c= a + b
+    print(c)
+    a = b
+    b = c
